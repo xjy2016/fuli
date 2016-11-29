@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=355,user-scalable=no"/>
 		<title></title>
 		<style type="text/css">
 			*{
@@ -14,8 +15,8 @@
 				overflow: hidden;
 			}
 			#box{
-				width: 375px;
-				height: 600px;
+				width: 335px;
+				height: 550px;
 				border: 10px solid #000;
 				margin: 0 auto;
 				overflow: hidden;
@@ -23,13 +24,13 @@
 			}
 			ul{
 				width: 5000px;
-				height: 600px;
+				height: 550px;
 				overflow: hidden;
 				position: absolute;
 			}
 			ul li{
-				width: 375px;
-				height: 600px;
+				width: 335px;
+				height: 550px;
 				float: left;
 			}
 			ul li img{
@@ -89,9 +90,10 @@
 	<script type="text/javascript">
 		var i = 0;
 		function getImg(){
+			var i = Math.ceil(Math.random()*12),j = Math.ceil(Math.random()*30)
 			$.ajax({
 				type:"get",
-				url:"https://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/1",
+				url:"http://gank.io/api/data/%E7%A6%8F%E5%88%A9/"+ i +"/"+j,
 				async:true,
 				success:function(res){
 					console.log(res.results)
