@@ -94,6 +94,7 @@
 			$.ajax({
 				type:"get",
 				url:"http://gank.io/api/data/%E7%A6%8F%E5%88%A9/"+ i +"/"+j,
+				dataType:"json",
 				async:true,
 				success:function(res){
 					console.log(res.results)
@@ -107,6 +108,9 @@
 					$(".disc span").eq(0).addClass("active")
 					$("ul").prepend(html)
 					console.log(html)
+				},
+				error:function(error){
+					console.log(error)
 				}
 			});
 		}
