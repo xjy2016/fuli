@@ -94,8 +94,8 @@
 			$.ajax({
 				type:"get",
 				url:"http://gank.io/api/data/%E7%A6%8F%E5%88%A9/"+ i +"/"+j,
-				dataType:"json",
-				async:true,
+				dataType:"jsonp",
+				jsonp:"callback",
 				success:function(res){
 					console.log(res.results)
 					var data = res.results;
