@@ -97,7 +97,6 @@
 				dataType:"json",
 				jsonpCallback:"jQuery20009423705155149851_1481626990652",
 				success:function(res){
-					console.log(res.results)
 					var data = res.results;
 					var html = ""
 					$.each(data, function(i,val) {
@@ -107,7 +106,6 @@
 					html += '<li><img src="'+ data[0].url +'" alt="1" /></li>'
 					$(".disc span").eq(0).addClass("active")
 					$("ul").prepend(html)
-					console.log(html)
 				},
 				error:function(error){
 					console.log(error)
