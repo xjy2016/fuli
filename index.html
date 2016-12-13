@@ -52,6 +52,7 @@
 				z-index: 10;
 				top: 50%;
 				margin-top: -30px;
+				cursor:pointer;
 			}
 			.left{
 				left: 10px;
@@ -75,6 +76,7 @@
 				border-radius: 50%;
 				background: rgba(11,11,11,.5);
 				margin: 5px;
+				cursor:pointer;
 			}
 			.disc .active{
 				background: rgba(255,0,0,.5);
@@ -149,7 +151,6 @@
 		$("#box").on("click",".left",function(){
 			var length = $("#box li").size()
 			i--;
-			console.log(length,i)
 			if (i == -1) {
 				i = length-2;
 				$('ul').css({left:-w*(length-1)})
