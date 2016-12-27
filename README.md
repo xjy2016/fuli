@@ -3,9 +3,9 @@
 -刷新是可以自动的播放
 -请点击以下链接查看效果[https://xjy2016.github.io/fuli/](https://xjy2016.github.io/fuli/)
 这是一个列表
-*这是一级列表
-*这是二级列表
-*这是三级列表
+* 这是一级列表
+* 这是二级列表
+* 这是三级列表
 ```javascript
 var obj = {
   name:"辛集云"，
