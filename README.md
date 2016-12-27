@@ -7,8 +7,8 @@
 * 这是二级列表
 * 这是三级列表
     *  这是三级菜单
-    *  this is a list2
-    *  这是三级餐单
+    *  this is a list2
+    *  这是三级餐单
 * 这是司机擦弹
 ```javascript
 var obj = {
