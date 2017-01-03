@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>完美移动</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+	.box{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		background: red;
+		left: 100px;
+		top: 100px;
+	}
+</style>
+</head>
+<body>
+    <div class="box">
+    	
+    </div>
+</body>
+<script>
+	var box =document.getElementsByClassName("box")[0];
+	(function move(box){
+		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+		width = width - box.offsetWidth;
+		height = height - box.offsetHeight;
+		console.log(window);
+		box.onmousedown = function (e) {
+			var e = e || event;
+			var x = e.offsetX || (e.clientX - this.offsetLeft);
+			var y = e.offsetY || (e.clientY - this.offsetTop);
+			document.onmousemove = function(e){
+				var e = e || event;
+				var _x = ((e.clientX - x)>width?width:(e.clientX - x))<0?0:((e.clientX - x)>width?width:(e.clientX - x));
+				var _y = ((e.clientY -y)>height?height:(e.clientY -y))<0?0:((e.clientY -y)>height?height:(e.clientY -y));
+				box.style.left = _x + 'px';
+				box.style.top = _y + 'px'
+			}
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			}
+		}
+	})(box);
+</script>
+</html>
